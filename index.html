@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PayBass.com | The Golden Standard of Digital Payments</title>
+    
+    <!-- الخطوط الفاخرة -->
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    
+    <!-- الأيقونات -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    
+    <!-- محرك التنسيق Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        richBlack: '#050505',
+                        gold: '#D4AF37',
+                        goldLight: '#F1D592',
+                        goldDeep: '#996515',
+                        bronze: '#8C6D31'
+                    },
+                    fontFamily: {
+                        cinzel: ['Cinzel', 'serif'],
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body { background-color: #050505; color: #d1d5db; }
+
+        /*  */
+        .hero-glow {
+            background: radial-gradient(circle at 50% 50%, rgba(212, 175, 55, 0.1) 0%, rgba(5, 5, 5, 1) 80%),
+                        url('https://images.unsplash.com/photo-1639762681485-074b7f938ba0?q=80&w=2000&auto=format&fit=crop');
+            background-size: cover;
+            background-position: center;
+        }
+
+        /* تأثير النبض المتوهج - Pulse Effect */
+        .glow-orb {
+            position: relative;
+            width: 200px;
+            height: 200px;
+            background: radial-gradient(circle, #D4AF37 0%, transparent 70%);
+            border-radius: 50%;
+            filter: blur(40px);
+            opacity: 0.4;
+            animation: pulse 4s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); opacity: 0.3; }
+            50% { transform: scale(1.3); opacity: 0.6; }
+        }
+
+        .gold-border {
+            border: 1px solid rgba(212, 175, 55, 0.3);
+        }
+
+        .text-gold-gradient {
+            background: linear-gradient(to right, #D4AF37, #F1D592, #D4AF37);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .glass-card {
+            background: rgba(255, 255, 255, 0.02);
+            backdrop-filter: blur(15px);
+            border: 1px solid rgba(212, 175, 55, 0.1);
+        }
+
+        /* تحسين مظهر الأزرار */
+        .btn-gold {
+            background: linear-gradient(45deg, #996515, #D4AF37, #996515);
+            background-size: 200% auto;
+            transition: 0.5s;
+        }
+        .btn-gold:hover {
+            background-position: right center;
+            box-shadow: 0 0 20px rgba(212, 175, 55, 0.4);
+        }
+    </style>
+</head>
+<body class="font-sans selection:bg-gold selection:text-richBlack overflow-x-hidden">
+
+    <!-- القائمة العلوية -->
+    <nav class="fixed top-0 w-full z-[100] border-b border-gold/10 bg-richBlack/90 backdrop-blur-xl px-6 md:px-16 py-5">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <div class="flex items-center space-x-3">
+                <div class="w-10 h-10 border border-gold flex items-center justify-center rotate-45 shadow-lg shadow-gold/20">
+                    <i class="fa-solid fa-coins text-gold -rotate-45"></i>
+                </div>
+                <span class="text-xl font-bold font-cinzel tracking-widest text-white uppercase">Pay<span class="text-gold">Bass</span></span>
+            </div>
+            
+            <a href="https://www.godaddy.com/domainsearch/find?domainToCheck=paybass.com" target="_blank" class="btn-gold text-richBlack px-8 py-2.5 rounded-sm text-[10px] font-black uppercase tracking-widest">
+                Acquire Domain
+            </a>
+        </div>
+    </nav>
+
+    <!-- الواجهة الرئيسية -->
+    <header class="relative min-h-screen flex items-center justify-center hero-glow px-6 pt-20">
+        <!-- تأثير التوهج المركزي -->
+        <div class="absolute flex items-center justify-center w-full h-full pointer-events-none">
+            <div class="glow-orb"></div>
+        </div>
+
+        <div class="relative z-10 max-w-4xl mx-auto text-center">
+            <div class="inline-flex items-center space-x-3 border border-gold/30 px-5 py-1.5 mb-10 rounded-full bg-gold/5">
+                <i class="fa-solid fa-gem text-gold text-[10px] animate-pulse"></i>
+                <span class="text-gold text-[9px] font-bold uppercase tracking-[0.4em]">Premium FinTech Asset Listing</span>
+            </div>
+            
+            <h1 class="text-4xl md:text-6xl font-cinzel font-bold text-white mb-8 leading-tight tracking-wide">
+                The Golden Standard of <br> <span class="text-gold-gradient italic">Digital Finance.</span>
+            </h1>
+            
+            <p class="text-gray-400 text-lg md:text-xl mb-12 max-w-2xl mx-auto font-light leading-relaxed">
+                <span class="text-white font-bold tracking-widest font-cinzel">PayBass.com</span> – A sophisticated, authoritative brand built for high-revenue payment ecosystems and elite financial institutions.
+            </p>
+            
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-6">
+                <a href="https://www.godaddy.com/domainsearch/find?domainToCheck=paybass.com" target="_blank" class="w-full sm:w-auto bg-white text-richBlack px-12 py-5 font-black uppercase tracking-widest text-xs hover:bg-gold transition-all shadow-2xl">
+                    Buy on GoDaddy
+                </a>
+                <a href="mailto:cccvcccv3@gmail.com" class="w-full sm:w-auto border border-gold/30 text-gold px-10 py-5 font-black uppercase tracking-widest text-xs hover:bg-gold/5 transition-all italic">
+                    Contact: cccvcccv3@gmail.com
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- تحليل قيمة العلامة التجارية -->
+    <section class="py-32 px-6 bg-richBlack">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid lg:grid-cols-2 gap-20 items-center">
+                <div class="space-y-10">
+                    <div class="inline-block border-l-4 border-gold pl-6">
+                        <h2 class="text-3xl md:text-5xl font-cinzel font-bold text-white uppercase tracking-tight leading-none">Power <br> <span class="text-gold italic">Meets Trust.</span></h2>
+                    </div>
+                    
+                    <p class="text-gray-400 text-lg leading-relaxed font-light">
+                        In the FinTech industry, the word "Bass" represents the core—the strong foundation of any transaction. <strong>PayBass.com</strong> signals a platform that is secure, deep-rooted, and universally scalable.
+                    </p>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 pt-6">
+                        <div class="glass-card p-8 rounded-sm hover:border-gold transition-all duration-500">
+                            <i class="fa-solid fa-shield-halved text-2xl text-gold mb-4"></i>
+                            <h4 class="text-white font-bold uppercase tracking-widest text-xs mb-2">Secure Origin</h4>
+                            <p class="text-gray-500 text-[10px] leading-relaxed uppercase">Built for high-security payment gateways and safe asset management.</p>
+                        </div>
+                        <div class="glass-card p-8 rounded-sm hover:border-gold transition-all duration-500">
+                            <i class="fa-solid fa-chart-line text-2xl text-gold mb-4"></i>
+                            <h4 class="text-white font-bold uppercase tracking-widest text-xs mb-2">High Liquidity</h4>
+                            <p class="text-gray-500 text-[10px] leading-relaxed uppercase">A short, brandable name optimized for global financial recognition.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="relative group rounded-sm overflow-hidden border border-gold/20 shadow-2xl">
+                    <!--  -->
+                    <img src="https://images.unsplash.com/photo-1563013544-824ae1b704d3?q=80&w=1200&auto=format&fit=crop" class="w-full h-[600px] object-cover grayscale-[0.4] group-hover:grayscale-0 transition duration-1000" alt="[Golden Card]">
+                    <div class="absolute inset-0 bg-gold/5 opacity-0 group-hover:opacity-100 transition duration-700"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- الاستخدامات الاستراتيجية -->
+    <section class="py-32 px-6 bg-[#0a0a0a] border-y border-gold/10">
+        <div class="max-w-7xl mx-auto text-center mb-24 italic">
+            <h2 class="text-3xl md:text-5xl font-cinzel font-bold text-white uppercase tracking-widest mb-4 italic">Strategic <span class="text-gold">Applications</span></h2>
+            <div class="h-1 w-24 bg-gold mx-auto"></div>
+        </div>
+
+        <div class="max-w-7xl mx-auto grid md:grid-cols-3 gap-8">
+            <!-- Box 1 -->
+            <div class="glass-card p-12 rounded-sm text-center group hover:bg-gold/5 transition duration-500">
+                <i class="fa-solid fa-building-columns text-3xl text-gold mb-8 group-hover:scale-110 transition"></i>
+                <h3 class="text-lg font-bold font-cinzel mb-4 uppercase tracking-widest text-white italic">Neo-Banking</h3>
+                <p class="text-gray-500 text-[11px] leading-relaxed italic font-light uppercase">The primary digital address for a modern, high-tech banking ecosystem.</p>
+            </div>
+            <!-- Box 2 -->
+            <div class="glass-card p-12 rounded-sm text-center group hover:bg-gold/5 transition duration-500 border-t-2 border-t-gold">
+                <i class="fa-solid fa-bolt text-3xl text-gold mb-8 group-hover:scale-110 transition"></i>
+                <h3 class="text-lg font-bold font-cinzel mb-4 uppercase tracking-widest text-white italic">Instant Payments</h3>
+                <p class="text-gray-500 text-[11px] leading-relaxed italic font-light uppercase">Establishing a high-speed gateway for global cross-border remittances.</p>
+            </div>
+            <!-- Box 3 -->
+            <div class="glass-card p-12 rounded-sm text-center group hover:bg-gold/5 transition duration-500">
+                <i class="fa-solid fa-coins text-3xl text-gold mb-8 group-hover:scale-110 transition"></i>
+                <h3 class="text-lg font-bold font-cinzel mb-4 uppercase tracking-widest text-white italic">Digital Assets</h3>
+                <p class="text-gray-500 text-[11px] leading-relaxed italic font-light uppercase">The authoritative hub for crypto-processing and decentralized finance solutions.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- قسم الشراء والتواصل -->
+    <section class="py-32 px-6 relative bg-richBlack">
+        <div class="max-w-5xl mx-auto glass-card p-12 md:p-24 rounded-sm shadow-2xl relative z-10 border-t-4 border-gold">
+            <div class="text-center mb-16 italic">
+                <h2 class="text-3xl md:text-6xl font-cinzel font-bold text-white mb-6 uppercase tracking-widest italic leading-none">Acquire <br> <span class="text-gold">The Asset</span></h2>
+                <p class="text-gray-500 max-w-2xl mx-auto uppercase font-bold tracking-[0.4em] text-[8px]">Exclusive Acquisition Inquiry for Premium Portfolios</p>
+            </div>
+
+            <div class="grid lg:grid-cols-2 gap-20 items-center italic">
+                <div class="space-y-12">
+                    <div class="flex items-center space-x-10 group">
+                        <div class="w-16 h-16 border border-gold/30 flex items-center justify-center text-gold text-2xl group-hover:bg-gold group-hover:text-richBlack transition-all duration-500 shadow-xl"><i class="fa-solid fa-paper-plane"></i></div>
+                        <div>
+                            <p class="text-[9px] uppercase tracking-widest font-black text-gray-500 mb-1">Registry Contact</p>
+                            <a href="mailto:cccvcccv3@gmail.com" class="text-lg font-bold text-white hover:text-gold transition tracking-tighter italic">cccvcccv3@gmail.com</a>
+                        </div>
+                    </div>
+                    <div class="flex items-center space-x-10 group">
+                        <div class="w-16 h-16 border border-gold/30 flex items-center justify-center text-gold text-2xl group-hover:bg-gold group-hover:text-richBlack transition-all duration-500 shadow-xl"><i class="fa-solid fa-cart-shopping"></i></div>
+                        <div>
+                            <p class="text-[9px] uppercase tracking-widest font-black text-gray-500 mb-1">Buy Securely</p>
+                            <a href="https://www.godaddy.com/domainsearch/find?domainToCheck=paybass.com" target="_blank" class="text-lg font-bold text-white hover:text-gold transition tracking-tighter italic font-cinzel">GoDaddy.com</a>
+                        </div>
+                    </div>
+                </div>
+
+                <form class="space-y-8" action="mailto:cccvcccv3@gmail.com" method="post" enctype="text/plain">
+                    <div class="space-y-3">
+                        <label class="text-[9px] font-black uppercase tracking-[0.4em] text-gray-500 ml-1">Proposed Valuation (USD)</label>
+                        <input type="text" name="offer" placeholder="e.g. $25,000" class="w-full bg-white/5 border-b-2 border-gold/30 py-4 outline-none focus:border-gold transition text-xl text-white font-serif italic" required />
+                    </div>
+                    <button type="submit" class="w-full btn-gold text-richBlack py-6 font-black font-cinzel uppercase tracking-[0.5em] text-[10px] hover:bg-white transition-all shadow-2xl">
+                        Submit Inquiry
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- التذييل -->
+    <footer class="py-24 bg-richBlack border-t border-white/5 text-center">
+        <div class="max-w-7xl mx-auto px-6 flex flex-col items-center space-y-12">
+            <div class="flex items-center space-x-4 italic">
+                <div class="w-10 h-10 border border-gold flex items-center justify-center rotate-45 shadow-lg">
+                    <i class="fa-solid fa-coins text-gold text-sm -rotate-45"></i>
+                </div>
+                <span class="text-2xl font-black font-cinzel tracking-widest text-white uppercase italic">PAY<span class="text-gold">BASS</span></span>
+            </div>
+            
+            <p class="text-gray-900 text-[9px] font-bold uppercase tracking-[0.6em] italic pt-10">
+                &copy; 2026 PayBass Portfolio • Verified Financial Asset • cccvcccv3@gmail.com
+            </p>
+        </div>
+    </footer>
+
+</body>
+</html>
