@@ -3,142 +3,104 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Paybass - Smart Payments</title>
+<title>Paybass</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 
 <style>
+* {margin:0;padding:0;box-sizing:border-box;}
+
 body {
-    margin: 0;
     font-family: 'Inter', sans-serif;
-    background: #0f172a;
+    background: #0b0f19;
     color: white;
-    overflow-x: hidden;
 }
 
-/* SALE BAR */
-.sale-bar {
-    background: #22c55e;
+/* TOP BAR */
+.topbar {
+    background: #16a34a;
     color: black;
     text-align: center;
-    padding: 12px;
+    padding: 10px;
     font-size: 14px;
 }
-.sale-bar a {
+
+.topbar a {
     color: black;
-    font-weight: bold;
+    font-weight: 600;
     text-decoration: none;
 }
 
 /* HERO */
 .hero {
-    position: relative;
     height: 90vh;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
-    overflow: hidden;
+    padding: 20px;
 }
 
-.bg-video {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+.container {
+    max-width: 800px;
 }
 
-/* overlay */
-.overlay {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background: rgba(0,0,0,0.6);
-}
-
-/* glow */
-.glow {
-    position: absolute;
-    width: 500px;
-    height: 500px;
-    background: radial-gradient(circle, #22c55e, transparent);
-    filter: blur(120px);
-    animation: moveGlow 6s infinite alternate;
-}
-
-@keyframes moveGlow {
-    from { transform: translate(-150px, -150px); }
-    to { transform: translate(150px, 150px); }
-}
-
-/* content */
-.hero-content {
-    position: relative;
-    z-index: 2;
-}
-
-.hero h1 {
-    font-size: 38px;
-    margin-bottom: 10px;
-}
-
-.hero p {
-    color: #cbd5f5;
-}
-
-.btn {
-    margin-top: 15px;
-    padding: 12px 25px;
-    background: linear-gradient(90deg,#22c55e,#06b6d4);
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    color: black;
+h1 {
+    font-size: 34px;
     font-weight: 600;
 }
 
-/* FEATURES */
-.section {
-    max-width: 1100px;
-    margin: auto;
-    padding: 60px 20px;
+p {
+    margin-top: 10px;
+    color: #94a3b8;
+    font-size: 16px;
 }
 
-.grid {
+.btn {
+    margin-top: 25px;
+    padding: 12px 24px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+.primary {
+    background: #22c55e;
+    color: black;
+}
+
+.secondary {
+    background: transparent;
+    border: 1px solid #334155;
+    color: white;
+    margin-left: 10px;
+}
+
+/* FEATURES */
+.features {
+    max-width: 1000px;
+    margin: auto;
+    padding: 60px 20px;
     display: flex;
     gap: 20px;
-    flex-wrap: wrap;
 }
 
 .card {
     flex: 1;
-    min-width: 250px;
-    background: #1e293b;
+    background: #111827;
     padding: 20px;
     border-radius: 10px;
 }
 
-/* MOCK */
-.mock {
-    text-align: center;
-}
-
-.mock img {
-    width: 90%;
-    max-width: 700px;
-    border-radius: 10px;
-}
-
-/* CTA */
-.cta {
-    text-align: center;
-    padding: 60px 20px;
+.card h3 {
+    margin-bottom: 8px;
 }
 
 /* FOOTER */
 footer {
     text-align: center;
-    padding: 30px;
+    padding: 40px;
     color: #64748b;
 }
 </style>
@@ -146,61 +108,40 @@ footer {
 
 <body>
 
-<div class="sale-bar">
+<div class="topbar">
 🚀 Paybass.com is for sale |
 <a href="https://www.godaddy.com/domainsearch/find?domainToCheck=paybass.com" target="_blank">Buy on GoDaddy</a> |
 Contact: <a href="mailto:cccvcccv3@gmail.com">cccvcccv3@gmail.com</a>
 </div>
 
 <section class="hero">
-    <video autoplay muted loop playsinline class="bg-video">
-        <source src="https://cdn.coverr.co/videos/coverr-fintech-technology-5173/1080p.mp4" type="video/mp4">
-    </video>
+    <div class="container">
+        <h1>Simple. Fast. Payments.</h1>
+        <p>Paybass is a modern fintech brand ready to power the next generation of online payments.</p>
 
-    <div class="overlay"></div>
-    <div class="glow"></div>
-
-    <div class="hero-content">
-        <h1>Next Generation Payments</h1>
-        <p>Fast, secure and scalable payment solutions</p>
-
-        <button class="btn" onclick="window.open('https://www.godaddy.com/domainsearch/find?domainToCheck=paybass.com')">
-            Buy Now on GoDaddy
+        <button class="btn primary" onclick="window.open('https://www.godaddy.com/domainsearch/find?domainToCheck=paybass.com')">
+            Buy Now
         </button>
 
-        <p style="margin-top:10px;color:#94a3b8;">
-        Secure transaction via GoDaddy marketplace
-        </p>
+        <button class="btn secondary" onclick="window.location.href='mailto:cccvcccv3@gmail.com'">
+            Make Offer
+        </button>
     </div>
 </section>
 
-<section class="section grid">
+<section class="features">
     <div class="card">
-        <h3>⚡ Fast Payments</h3>
-        <p>Instant transactions with low fees</p>
+        <h3>⚡ Fast</h3>
+        <p>Instant payments with low latency</p>
     </div>
     <div class="card">
         <h3>🔐 Secure</h3>
-        <p>Advanced encryption and fraud protection</p>
+        <p>Enterprise-level security built in</p>
     </div>
     <div class="card">
         <h3>🌍 Global</h3>
-        <p>Accept payments worldwide</p>
+        <p>Ready for worldwide transactions</p>
     </div>
-</section>
-
-<section class="section mock">
-    <h2>Simple Dashboard</h2>
-    <img src="https://images.unsplash.com/photo-1551281044-8aebc7f2e5a0">
-</section>
-
-<section class="cta">
-    <h2>Own This Fintech Brand</h2>
-    <p>Paybass.com is available for acquisition</p>
-
-    <button class="btn" onclick="window.location.href='mailto:cccvcccv3@gmail.com'">
-        Contact Owner
-    </button>
 </section>
 
 <footer>
