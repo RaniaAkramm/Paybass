@@ -1,189 +1,269 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Paybass - Payments Platform</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paybass | The Future of Global Payments</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: #020617;
+            color: #f8fafc;
+            overflow-x: hidden;
+        }
 
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+        .gradient-text {
+            background: linear-gradient(90deg, #34d399, #3b82f6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
 
-<style>
-*{margin:0;padding:0;box-sizing:border-box;}
+        .hero-glow {
+            position: absolute;
+            top: -10%;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80vw;
+            height: 50vh;
+            background: radial-gradient(circle, rgba(52, 211, 153, 0.15) 0%, rgba(59, 130, 246, 0.05) 50%, transparent 100%);
+            z-index: -1;
+            filter: blur(80px);
+        }
 
-body{
-    font-family:'Inter',sans-serif;
-    background:linear-gradient(135deg,#0f172a,#020617);
-    color:white;
-}
+        .glass-card {
+            background: rgba(30, 41, 59, 0.5);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.3s ease;
+        }
 
-/* TOP BAR */
-.topbar{
-    background:linear-gradient(90deg,#22c55e,#4ade80);
-    color:black;
-    text-align:center;
-    padding:12px;
-    font-size:14px;
-}
-.topbar a{
-    color:black;
-    font-weight:600;
-    text-decoration:none;
-}
+        .glass-card:hover {
+            border-color: rgba(52, 211, 153, 0.4);
+            transform: translateY(-5px);
+        }
 
-/* HERO */
-.hero{
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-    padding:80px 10%;
-    gap:40px;
-}
+        .btn-primary {
+            background: linear-gradient(90deg, #10b981, #3b82f6);
+            transition: all 0.3s ease;
+        }
 
-.hero-text{
-    max-width:500px;
-}
+        .btn-primary:hover {
+            opacity: 0.9;
+            transform: scale(1.05);
+            box-shadow: 0 10px 25px -5px rgba(16, 185, 129, 0.4);
+        }
 
-.hero h1{
-    font-size:42px;
-    line-height:1.2;
-}
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+            100% { transform: translateY(0px); }
+        }
 
-.hero p{
-    margin-top:15px;
-    color:#94a3b8;
-}
-
-/* BUTTONS */
-.btn{
-    margin-top:25px;
-    padding:14px 26px;
-    border-radius:10px;
-    border:none;
-    cursor:pointer;
-    font-weight:600;
-}
-
-.primary{
-    background:linear-gradient(90deg,#22c55e,#06b6d4);
-    color:black;
-}
-
-.secondary{
-    background:transparent;
-    border:1px solid #334155;
-    color:white;
-    margin-left:10px;
-}
-
-/* IMAGE */
-.hero img{
-    width:450px;
-    border-radius:14px;
-    box-shadow:0 20px 60px rgba(0,0,0,0.5);
-}
-
-/* FEATURES */
-.features{
-    display:flex;
-    padding:60px 10%;
-    gap:20px;
-}
-
-.card{
-    flex:1;
-    background:#111827;
-    padding:25px;
-    border-radius:12px;
-}
-
-.card h3{
-    margin-bottom:10px;
-}
-
-/* STRIP */
-.strip{
-    text-align:center;
-    padding:60px 20px;
-}
-
-.strip img{
-    width:80%;
-    max-width:700px;
-    border-radius:12px;
-    margin-top:20px;
-}
-
-/* CTA */
-.cta{
-    text-align:center;
-    padding:60px 20px;
-}
-
-footer{
-    text-align:center;
-    padding:40px;
-    color:#64748b;
-}
-</style>
+        .float-animation {
+            animation: float 6s ease-in-out infinite;
+        }
+    </style>
 </head>
-
 <body>
 
-<div class="topbar">
-🚀 Paybass.com is for sale |
-<a href="https://www.godaddy.com/domainsearch/find?domainToCheck=paybass.com" target="_blank">Buy on GoDaddy</a> |
-Contact: <a href="mailto:cccvcccv3@gmail.com">cccvcccv3@gmail.com</a>
-</div>
+    <!-- Hero Glow -->
+    <div class="hero-glow"></div>
 
-<section class="hero">
-    <div class="hero-text">
-        <h1>Modern Payments Infrastructure</h1>
-        <p>Paybass is a premium fintech brand built for fast, secure, and scalable online transactions.</p>
+    <!-- Navigation -->
+    <nav class="flex items-center justify-between px-6 py-6 max-w-7xl mx-auto">
+        <div class="flex items-center space-x-2">
+            <div class="w-10 h-10 bg-gradient-to-tr from-emerald-400 to-blue-500 rounded-xl flex items-center justify-center shadow-lg">
+                <span class="text-white font-bold text-xl">P</span>
+            </div>
+            <span class="text-2xl font-extrabold tracking-tight">Pay<span class="text-emerald-400">bass</span></span>
+        </div>
+        <div class="hidden md:flex space-x-8 text-sm font-medium text-slate-400">
+            <a href="#" class="hover:text-white transition">Features</a>
+            <a href="#" class="hover:text-white transition">Security</a>
+            <a href="#" class="hover:text-white transition">API Docs</a>
+        </div>
+        <div>
+            <a href="https://www.godaddy.com/domainsearch/find?domainToCheck=paybass.com" target="_blank" 
+               class="px-5 py-2.5 rounded-full text-sm font-semibold border border-slate-700 hover:border-emerald-500 transition">
+                Sign In
+            </a>
+        </div>
+    </nav>
 
-        <button class="btn primary" onclick="window.open('https://www.godaddy.com/domainsearch/find?domainToCheck=paybass.com')">
-            Buy Domain
-        </button>
-
-        <button class="btn secondary" onclick="window.location.href='mailto:cccvcccv3@gmail.com'">
-            Make Offer
-        </button>
+    <!-- Top Sale Banner -->
+    <div class="bg-emerald-500/10 border-y border-emerald-500/20 py-2 text-center">
+        <p class="text-emerald-400 text-xs md:text-sm font-medium">
+            🚀 The premium domain <span class="font-bold">Paybass.com</span> is currently for sale. 
+            <a href="https://www.godaddy.com/domainsearch/find?domainToCheck=paybass.com" target="_blank" class="underline ml-2 hover:text-emerald-300">Acquire it today</a>
+        </p>
     </div>
 
-    <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d">
-</section>
+    <!-- Hero Section -->
+    <header class="max-w-7xl mx-auto px-6 pt-20 pb-32 flex flex-col md:flex-row items-center justify-between">
+        <div class="md:w-1/2 text-center md:text-left mb-16 md:mb-0">
+            <div class="inline-block px-4 py-1.5 mb-6 rounded-full bg-slate-800/50 border border-slate-700 text-emerald-400 text-xs font-bold tracking-widest uppercase">
+                Next-Gen Fintech
+            </div>
+            <h1 class="text-5xl md:text-7xl font-extrabold leading-[1.1] mb-6">
+                Redefining the <br>
+                <span class="gradient-text">Future of Money.</span>
+            </h1>
+            <p class="text-slate-400 text-lg md:text-xl max-w-lg mb-10 leading-relaxed">
+                Paybass provides a unified infrastructure for global businesses to accept payments, manage risk, and scale faster than ever.
+            </p>
+            <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 justify-center md:justify-start">
+                <button onclick="window.open('https://www.godaddy.com/domainsearch/find?domainToCheck=paybass.com')" 
+                        class="btn-primary px-8 py-4 rounded-2xl text-black font-bold text-lg shadow-xl shadow-emerald-500/20">
+                    Buy This Domain
+                </button>
+                <button onclick="window.location.href='mailto:cccvcccv3@gmail.com'" 
+                        class="px-8 py-4 rounded-2xl bg-slate-800 hover:bg-slate-700 text-white font-bold text-lg border border-slate-700 transition">
+                    Make an Offer
+                </button>
+            </div>
+            <div class="mt-8 flex items-center justify-center md:justify-start space-x-4 text-slate-500 text-sm">
+                <div class="flex -space-x-2">
+                    <img class="w-8 h-8 rounded-full border-2 border-slate-900" src="https://i.pravatar.cc/100?img=1" alt="">
+                    <img class="w-8 h-8 rounded-full border-2 border-slate-900" src="https://i.pravatar.cc/100?img=2" alt="">
+                    <img class="w-8 h-8 rounded-full border-2 border-slate-900" src="https://i.pravatar.cc/100?img=3" alt="">
+                </div>
+                <p>Trusted by 500+ global merchants</p>
+            </div>
+        </div>
 
-<section class="features">
-    <div class="card">
-        <h3>⚡ Instant Payments</h3>
-        <p>Process transactions in seconds with high reliability.</p>
-    </div>
-    <div class="card">
-        <h3>🔐 Secure Platform</h3>
-        <p>Enterprise-level encryption and fraud protection.</p>
-    </div>
-    <div class="card">
-        <h3>🌍 Global Reach</h3>
-        <p>Accept payments from anywhere in the world.</p>
-    </div>
-</section>
+        <!-- Floating UI Elements -->
+        <div class="md:w-5/12 relative">
+            <div class="float-animation relative z-10">
+                <div class="glass-card p-6 rounded-3xl shadow-2xl">
+                    <div class="flex justify-between items-center mb-8">
+                        <span class="text-slate-400 font-medium">Recent Transactions</span>
+                        <div class="w-2 h-2 bg-emerald-500 rounded-full animate-pulse"></div>
+                    </div>
+                    <div class="space-y-6">
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center space-x-3">
+                                <div class="w-10 h-10 bg-slate-700 rounded-full flex items-center justify-center">
+                                    <svg class="w-5 h-5 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"></path></svg>
+                                </div>
+                                <div>
+                                    <p class="font-bold text-sm">Amazon AWS</p>
+                                    <p class="text-xs text-slate-500">Subscription Service</p>
+                                </div>
+                            </div>
+                            <p class="font-bold text-emerald-400">+$2,400.00</p>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center space-x-3">
+                                <div class="w-10 h-10 bg-slate-700 rounded-full flex items-center justify-center">
+                                    <svg class="w-5 h-5 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h18M7 15h1m4 0h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z"></path></svg>
+                                </div>
+                                <div>
+                                    <p class="font-bold text-sm">Stripe Payout</p>
+                                    <p class="text-xs text-slate-500">Direct Deposit</p>
+                                </div>
+                            </div>
+                            <p class="font-bold text-blue-400">+$12,050.80</p>
+                        </div>
+                    </div>
+                    <div class="mt-8 pt-6 border-t border-slate-700 flex justify-between items-end">
+                        <div>
+                            <p class="text-xs text-slate-500 mb-1">Total Balance</p>
+                            <p class="text-2xl font-bold">$42,950.00</p>
+                        </div>
+                        <div class="h-10 w-24 bg-emerald-500/10 rounded-lg border border-emerald-500/20 flex items-center justify-center">
+                            <span class="text-emerald-400 text-xs font-bold">+12.5%</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Decorative circle -->
+            <div class="absolute -bottom-10 -right-10 w-64 h-64 bg-blue-600/20 rounded-full blur-3xl -z-10"></div>
+            <div class="absolute -top-10 -left-10 w-48 h-48 bg-emerald-600/20 rounded-full blur-3xl -z-10"></div>
+        </div>
+    </header>
 
-<section class="strip">
-    <h2>Powerful Payment Dashboard</h2>
-    <img src="https://images.unsplash.com/photo-1551281044-8aebc7f2e5a0">
-</section>
+    <!-- Features Section -->
+    <section class="max-w-7xl mx-auto px-6 py-24">
+        <div class="text-center mb-16">
+            <h2 class="text-3xl md:text-4xl font-bold mb-4">Built for Scale</h2>
+            <p class="text-slate-400">Modern features for modern global commerce</p>
+        </div>
+        <div class="grid md:grid-cols-3 gap-8">
+            <div class="glass-card p-8 rounded-3xl">
+                <div class="w-12 h-12 bg-emerald-500/20 rounded-2xl flex items-center justify-center mb-6">
+                    <svg class="w-6 h-6 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                </div>
+                <h3 class="text-xl font-bold mb-3">Instant Settlement</h3>
+                <p class="text-slate-400 text-sm leading-relaxed">
+                    Access your funds in minutes, not days. Our real-time rails ensure liquidity is always where it's needed.
+                </p>
+            </div>
+            <div class="glass-card p-8 rounded-3xl">
+                <div class="w-12 h-12 bg-blue-500/20 rounded-2xl flex items-center justify-center mb-6">
+                    <svg class="w-6 h-6 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
+                </div>
+                <h3 class="text-xl font-bold mb-3">Bank-Grade Security</h3>
+                <p class="text-slate-400 text-sm leading-relaxed">
+                    PCI-DSS Level 1 certified. Every transaction is protected by advanced ML fraud detection and 256-bit encryption.
+                </p>
+            </div>
+            <div class="glass-card p-8 rounded-3xl">
+                <div class="w-12 h-12 bg-purple-500/20 rounded-2xl flex items-center justify-center mb-6">
+                    <svg class="w-6 h-6 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"></path></svg>
+                </div>
+                <h3 class="text-xl font-bold mb-3">Global Acceptance</h3>
+                <p class="text-slate-400 text-sm leading-relaxed">
+                    Accept 135+ currencies and dozens of local payment methods with a single integration. Go global on day one.
+                </p>
+            </div>
+        </div>
+    </section>
 
-<section class="cta">
-    <h2>Own Paybass.com</h2>
-    <p>This premium fintech domain is available for acquisition.</p>
+    <!-- Buy Domain CTA -->
+    <section class="max-w-5xl mx-auto px-6 mb-32">
+        <div class="bg-gradient-to-r from-emerald-600/20 to-blue-600/20 border border-white/10 rounded-[3rem] p-12 text-center relative overflow-hidden">
+            <div class="absolute top-0 right-0 p-8">
+                <div class="w-32 h-32 bg-white/5 rounded-full blur-2xl"></div>
+            </div>
+            <h2 class="text-4xl font-bold mb-6">Own <span class="text-emerald-400 underline decoration-emerald-500/30">Paybass.com</span></h2>
+            <p class="text-slate-300 text-lg max-w-2xl mx-auto mb-10 leading-relaxed">
+                Premium domains are the digital real estate of the future. Build your fintech empire on a brandable, short, and memorable foundation.
+            </p>
+            <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 justify-center">
+                <a href="https://www.godaddy.com/domainsearch/find?domainToCheck=paybass.com" target="_blank" 
+                   class="bg-white text-black px-10 py-4 rounded-2xl font-bold text-lg hover:bg-slate-200 transition shadow-xl">
+                    Buy on GoDaddy
+                </a>
+                <a href="mailto:cccvcccv3@gmail.com" 
+                   class="bg-transparent border border-white/20 px-10 py-4 rounded-2xl font-bold text-lg hover:bg-white/5 transition">
+                    Contact Owner
+                </a>
+            </div>
+        </div>
+    </section>
 
-    <button class="btn primary" onclick="window.open('https://www.godaddy.com/domainsearch/find?domainToCheck=paybass.com')">
-        Buy Now
-    </button>
-</section>
-
-<footer>
-© 2026 Paybass
-</footer>
+    <!-- Footer -->
+    <footer class="border-t border-slate-800 py-12">
+        <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center">
+            <div class="flex items-center space-x-2 mb-8 md:mb-0">
+                <div class="w-8 h-8 bg-gradient-to-tr from-emerald-400 to-blue-500 rounded-lg flex items-center justify-center">
+                    <span class="text-white font-bold text-sm">P</span>
+                </div>
+                <span class="text-xl font-extrabold">Paybass</span>
+            </div>
+            <div class="flex space-x-8 text-sm text-slate-500">
+                <a href="#" class="hover:text-emerald-400">Privacy</a>
+                <a href="#" class="hover:text-emerald-400">Terms</a>
+                <a href="#" class="hover:text-emerald-400">LinkedIn</a>
+                <a href="#" class="hover:text-emerald-400">Twitter</a>
+            </div>
+            <p class="mt-8 md:mt-0 text-slate-600 text-xs">
+                &copy; 2026 Paybass Digital Assets. All rights reserved.
+            </p>
+        </div>
+    </footer>
 
 </body>
 </html>
